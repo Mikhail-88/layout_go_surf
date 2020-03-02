@@ -59,6 +59,25 @@ li {
   }
 }
 
+.headline-right {
+  display: inline-block;
+  @include font-style(400, 22px, 32px);
+  letter-spacing: 7.33px;
+  opacity: 0.5;
+  position: relative;
+  padding-right: 103px;
+
+  &::before {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: $white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+}
+
 .title {
   span {
     display: inline-block;

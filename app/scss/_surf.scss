@@ -188,6 +188,10 @@
 .surf-slider {
   padding-top: 110px;
 
+  .slick-slide {
+    margin-right: 10px;
+  }
+
   .slick-slide:nth-child(4n + 1) {
     .surf-box {
       margin-top: 32px;
