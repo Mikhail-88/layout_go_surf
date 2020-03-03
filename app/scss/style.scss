@@ -1,9 +1,14 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "reset";
 @import "header";
+@import "btn";
 @import "surf";
-@import "travel";
+@import "holder";
+@import "quantity";
+@import "shop";
+@import "footer";
 
 *,
 *::before,
@@ -22,50 +27,18 @@ body {
   text-transform: uppercase;
 }
 
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: $white;
-}
-
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   max-width: 1920px;
   margin: 0 auto;
 }
 
-.headline-left {
-  display: inline-block;
-  @include font-style(400, 22px, 32px);
-  letter-spacing: 7.33px;
-  opacity: 0.5;
-  position: relative;
-  padding-left: 103px;
-
-  &::before {
-    content: "";
-    width: 80px;
-    height: 1px;
-    background-color: $white;
-    position: absolute;
-    left: 0;
-    top: 50%;
-  }
-}
-
+.headline-left,
 .headline-right {
   display: inline-block;
   @include font-style(400, 22px, 32px);
   letter-spacing: 7.33px;
   opacity: 0.5;
   position: relative;
-  padding-right: 103px;
 
   &::before {
     content: "";
@@ -73,8 +46,23 @@ li {
     height: 1px;
     background-color: $white;
     position: absolute;
-    right: 0;
     top: 50%;
+  }
+}
+
+.headline-left {
+  padding-left: 103px;
+
+  &::before {
+    left: 0;
+  }
+}
+
+.headline-right {
+  padding-right: 103px;
+
+  &::before {
+    right: 0;
   }
 }
 
@@ -89,12 +77,12 @@ li {
   }
 
   h3 {
-    margin: 0;
     color: $white;
     font-size: 80px;
     position: absolute;
     top: 0;
     right: -5px;
+    margin: 0;
 
     &::after {
       content: "";
@@ -115,7 +103,6 @@ li {
 
   &__head {
     @include font-style(800, 40px, 86px);
-    // padding-right: 10px;
 
     span {
       font-weight: 300;
@@ -123,36 +110,19 @@ li {
   }
 }
 
-.btn {
-  @include font-style(800, 40px, 36px);
+.descr {
 
-  span {
-    display: inline-block;
-    padding: 17px 57px 15px 17px;
-    background-color: $green;
-    position: relative;
-    margin-left: 19px;
+  &__head {
+    @include font-style(800, 40px, 60px);
+    display: flex;
+  }
+}
 
-    &::before {
-      content: "";
-      width: 20px;
-      height: 1px;
-      background-color: $white;
-      position: absolute;
-      top: 50%;
-      left: -10px;
-    }
+.star-list li {
+  display: inline-block;
 
-    &::after {
-      content: "";
-      width: 25px;
-      height: 21px;
-      background-image: url(../img/arrow-right.svg);
-      position: absolute;
-      top: 50%;
-      right: 17px;
-      transform: translateY(-50%);
-    }
+  & + li {
+    margin-left: -25px;
   }
 }
 

@@ -3,11 +3,11 @@
 @import "fonts";
 
 .surf {
-  padding: 160px 0 120px;
   background-image: url(../img/surf_marker.png);
   background-repeat: no-repeat;
   background-position: right 200px;
   background-size: auto;
+  padding: 160px 0 220px;
 
   &__subtitle {
     text-align: right;
@@ -259,12 +259,12 @@
     }
 
     &-btn {
+      text-align: center;
+      opacity: 0;
       position: absolute;
       bottom: 0;
       right: 0;
       left: 0;
-      text-align: center;
-      opacity: 0;
       transition: all 0.4s linear;
     }
   }

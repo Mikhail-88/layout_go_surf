@@ -1,0 +1,27 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+.footer {
+  text-align: center;
+  padding: 275px 0 34px;
+
+  .btn {
+    span {
+      padding: 17px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__copy {
+    @include font-style(300, 12px, 14px);
+    letter-spacing: 1.05px;
+    padding-top: 27px;
+    opacity: 0.5;
+  }
+}
+
+@import "media";

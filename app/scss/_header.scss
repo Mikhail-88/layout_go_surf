@@ -41,6 +41,7 @@
   }
 
   &__date {
+    display: block;
     @include font-style(800, 72px, 64px);
     margin-top: 50px;
 

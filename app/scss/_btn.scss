@@ -1,0 +1,39 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+
+.btn {
+  @include font-style(800, 40px, 36px);
+
+  span {
+    display: inline-block;
+    padding: 17px 57px 15px 17px;
+    background-color: $green;
+    position: relative;
+    margin-left: 19px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 1px;
+      background-color: $white;
+      position: absolute;
+      top: 50%;
+      left: -10px;
+    }
+
+    &::after {
+      content: "";
+      width: 25px;
+      height: 21px;
+      background-image: url(../img/arrow-right.svg);
+      position: absolute;
+      top: 50%;
+      right: 17px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@import "media";

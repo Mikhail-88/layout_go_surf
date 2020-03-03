@@ -1,0 +1,154 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+.shop {
+  background-image: url(../img/shop-bg.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.shop__slider {
+  padding-left: 132px;
+
+  &-inner {
+    display: flex;
+  }
+
+  &-info {
+    max-width: 480px;
+    width: 100%;
+    margin-right: 40px;
+    padding-top: 160px;
+  }
+
+  &-price {
+    @include font-style(800, 32px, 40px);
+    margin-bottom: 64px;
+
+    sup {
+      font-size: 18px;
+      padding-left: 2px;
+    }
+  }
+
+  &-content {
+    padding-left: 170px;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.descr__head-shop {
+  max-width: 340px;
+  margin-bottom: 47px;
+}
+
+.shop__star-list {
+  margin-left: -10px;
+}
+
+.shop__extras {
+  padding-left: 150px;
+
+  &-title {
+    @include font-style(800, 28px, 40px);
+    margin-bottom: 25px;
+  }
+  
+  &-inner {
+    display: flex;
+  }
+
+  &-box {
+    text-align: center;
+    margin-right: 57px;
+  }
+
+  &-img {
+    min-height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  &-name {
+    @include font-style(400, 18px, 22px);
+    letter-spacing: 8px;
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+
+  &-price {
+    @include font-style(800, 18px, 40px);
+  }
+}
+
+.shop__picture {
+  position: relative;
+
+  &-box {
+    position: absolute;
+
+    &--1 {
+      right: 40px;
+      top: 215px;
+    }
+
+    &--2 {
+      left: -6px;
+      top: 313px;
+    }
+
+    &--3 {
+      left: 52px;
+      bottom: 70px;
+    }
+
+    &__circle {
+      width: 20px;
+      height: 20px;
+      background-color: $white;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+
+      &.active {
+        .circle__row {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+
+        & + .shop__picture-box__content {
+          display: block;
+        }
+      }
+    }
+
+    &__content {
+      display: none;
+      width: 359px;
+      @include font-style(800, 24px, 24px);
+      position: absolute;
+      padding-left: 104;
+      top: -15px;
+      left: 40px;
+    }
+  }
+}
+
+.circle__row {
+  background-color: $green;
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+
+  & + .circle__row {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+@import "media";

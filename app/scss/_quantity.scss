@@ -1,0 +1,52 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+.quantity {
+  display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 25px;
+  height: 42px;
+  @include font-style(800, 40px, 36px);
+  color: $white;
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.quantity-button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 45px;
+  cursor: pointer;
+
+  &.quantity-up {
+    position: absolute;
+    right: 0;
+  }
+  
+  &.quantity-down {
+    position: absolute;
+    right: 25px;
+  }
+}
+
+@import "media";
