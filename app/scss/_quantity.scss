@@ -49,4 +49,17 @@ input[type=number] {
   }
 }
 
+@media (max-width: 1000px) {
+  .quantity-button {
+    &.quantity-up {
+      right: auto;
+      left: 25px;
+    }
+    
+    &.quantity-down {
+      right: auto;
+    }
+  }
+}
+
 @import "media";

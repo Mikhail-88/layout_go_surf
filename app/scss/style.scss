@@ -92,7 +92,6 @@ body {
       position: absolute;
       top: 0;
       right: 0;
-
     }
   }
 }
@@ -111,7 +110,6 @@ body {
 }
 
 .descr {
-
   &__head {
     @include font-style(800, 40px, 60px);
     display: flex;
@@ -121,9 +119,66 @@ body {
 .star-list li {
   display: inline-block;
 
-  & + li {
+  &+li {
     margin-left: -25px;
   }
 }
 
-@import "media";
+@media (max-width: 740px) {
+  .subtitle__head,
+  .descr__head {
+    @include font-style(800, 30px, 46px);
+  }
+
+  .title {
+    span {
+      font-size: 110px;
+      padding-bottom: 0;
+    }
+  }
+
+  .star-list {
+    margin-left: -15px;
+  }
+}
+
+@media (max-width: 580px) {
+  .subtitle__head,
+  .descr__head {
+    @include font-style(600, 25px, 35px);
+
+  }
+
+  .headline-left,
+  .headline-right {
+    @include font-style(300, 18px, 22px);
+    letter-spacing: 3px;
+
+    &::before {
+      width: 50px;
+    }
+  }
+
+  .headline-left {
+    padding-left: 60px;
+  }
+
+  .headline-right {
+    padding-right: 60px;
+  }
+
+  .title {
+    span {
+      font-size: 90px;
+    }
+
+    h3 {
+      font-size: 65px;
+      left: 70px;
+    }
+  }
+
+  .travel h3::after {
+    right: 30px;
+  }
+}
