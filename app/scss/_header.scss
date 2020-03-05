@@ -61,6 +61,7 @@
     text-transform: capitalize;
     position: relative;
     padding-left: 19px;
+    transition: color 0.3s linear;
 
     &::before {
       content: "";
@@ -70,6 +71,10 @@
       position: absolute;
       left: 0;
       top: 0;
+    }
+
+    &:hover {
+      color: $green;
     }
   }
 
@@ -94,6 +99,10 @@
     &:hover {
       color: $green;
       transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.9);
     }
 
     span {

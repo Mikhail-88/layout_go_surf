@@ -4,34 +4,52 @@
 
 .btn {
   @include font-style(800, 40px, 36px);
-
+  
   span {
     display: inline-block;
-    background-color: $green;
-    position: relative;
-    padding: 17px 57px 15px 17px;
-    margin-left: 19px;
+    padding: 17px 37px 15px 17px;
+    transition: background 0.4s linear;
 
-    &::before {
-      content: "";
-      width: 20px;
-      height: 1px;
-      background-color: $white;
-      position: absolute;
-      top: 50%;
-      left: -10px;
+    &:last-child {
+      background: $green;
+      position: relative;
+      margin-left: -10px;
+  
+      &::before {
+        content: "";
+        width: 20px;
+        height: 1px;
+        background-color: $white;
+        position: absolute;
+        top: 50%;
+        left: -10px;
+      }
+  
+      &::after {
+        content: "";
+        width: 25px;
+        height: 21px;
+        background-image: url(../img/arrow-right.svg);
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  
+  &:hover {
+    span {
+      background: none;
     }
 
-    &::after {
-      content: "";
-      width: 25px;
-      height: 21px;
-      background-image: url(../img/arrow-right.svg);
-      position: absolute;
-      top: 50%;
-      right: 17px;
-      transform: translateY(-50%);
+    span:first-child {
+      background: $green;
     }
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 }
 
@@ -44,11 +62,15 @@
 @media (max-width: 580px) {
   .btn {
     line-height: 30px;
-  }
-}
 
-@media (max-width: 470px) {
-  .btn {
-    font-size: 20px;
+    span {
+      padding: 14px 33px 12px 14px;
+  
+      &:last-child::after {
+        width: 20px;
+        height: 17px;
+        background-size: contain;
+      }
+    }
   }
 }

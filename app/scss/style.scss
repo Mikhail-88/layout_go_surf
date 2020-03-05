@@ -26,6 +26,8 @@ body {
   background-color: $gb;
   color: $white;
   text-transform: uppercase;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -68,7 +70,7 @@ body {
 }
 
 .title {
-  span {
+  div {
     display: inline-block;
     font-weight: 800;
     font-size: 200px;
@@ -77,6 +79,10 @@ body {
     transform: translateX(-40px);
   }
 
+  span {
+    display: inline-block;
+  }
+  
   h3 {
     color: $white;
     font-size: 80px;
