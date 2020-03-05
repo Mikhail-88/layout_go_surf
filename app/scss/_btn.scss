@@ -1,15 +1,15 @@
 @import "vars";
 @import "libs";
-@import "fonts";
+@import "mixins";
 
 .btn {
   @include font-style(800, 40px, 36px);
 
   span {
     display: inline-block;
-    padding: 17px 57px 15px 17px;
     background-color: $green;
     position: relative;
+    padding: 17px 57px 15px 17px;
     margin-left: 19px;
 
     &::before {

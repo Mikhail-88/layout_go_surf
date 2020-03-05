@@ -1,6 +1,6 @@
 @import "vars";
 @import "libs";
-@import "fonts";
+@import "mixins";
 
 .header {
   height: 100vh;
@@ -118,8 +118,8 @@
 
   &__line {
     height: 5px;
-    margin-bottom: 5px;
     background-color: $green;
+    margin-bottom: 5px;
   }
 }
 
@@ -196,7 +196,7 @@
 .line-animation {
   stroke-dashoffset: 600;
   stroke-dasharray: 600;
-  animation: animdash 4s 6s forwards;
+  animation: animdash 4s infinite 6s;
 }
 
 @keyframes animdash {
@@ -301,14 +301,12 @@
   .menu {
     width: 370px;
     background-color: $gb;
-    z-index: 1;
     position: absolute;
     top: 0;
     left: 100px;
     bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 1;
+    @include centered;
     padding-top: 17px;
     transform: translateX(calc(-100% - 100px));
     transition: all 0.5s linear;

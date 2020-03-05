@@ -1,6 +1,6 @@
 @import "vars";
 @import "libs";
-@import "fonts";
+@import "mixins";
 
 .shop {
   background-image: url(../img/shop-bg.png);
@@ -18,8 +18,8 @@
   &-info {
     max-width: 480px;
     width: 100%;
-    margin-right: 40px;
     padding-top: 160px;
+    margin-right: 40px;
   }
 
   &-price {
@@ -33,9 +33,9 @@
   }
 
   &-content {
-    padding-left: 170px;
     display: flex;
     align-items: flex-end;
+    padding-left: 170px;
   }
 }
 
@@ -67,9 +67,7 @@
 
   &-img {
     min-height: 105px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centered;
     margin-bottom: 35px;
   }
 
@@ -129,8 +127,8 @@
       display: none;
       width: 270px;
       @include font-style(800, 24px, 24px);
-      position: absolute;
       padding-left: 104;
+      position: absolute;
       top: -15px;
       left: 40px;
     }
@@ -138,10 +136,10 @@
 }
 
 .circle__row {
-  background-color: $green;
-  position: absolute;
   width: 12px;
   height: 2px;
+  background-color: $green;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0);
@@ -151,4 +149,94 @@
   }
 }
 
-@import "media";
+@media (max-width: 1300px) {
+  .shop__slider-content {
+    padding-left: 42px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .shop__slider {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .shop__slider {
+    &-inner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-info {
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+  }
+
+  .descr__head-shop {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 740px) {
+  .shop__picture-box__content {
+    @include font-style(600, 18px, 20px);
+    padding-left: 0;
+    top: 35px;
+    left: 0;
+  }
+
+  .shop__extras {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 650px) {
+  .shop__extras-inner {
+    flex-direction: column;
+  }
+
+  .shop__picture-box--1 .shop__picture-box__content {
+    left: -110px;
+  }
+}
+
+@media (max-width: 500px) {
+  .shop__slider {
+    padding: 0;
+
+    &-info {
+      padding: 50px 0 50px 30px;
+    }
+
+    &-content {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  .shop__extras {
+    padding: 0;
+
+    &-box {
+      margin: 0 20px;
+    }
+
+    &-title {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    &-inner {
+      flex-direction: row;
+    }
+  }
+
+  .shop__picture-box__content {
+    width: 200px;
+    @include font-style(400, 14px, 20px);
+  }
+}

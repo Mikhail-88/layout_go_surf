@@ -1,6 +1,6 @@
 @import "vars";
 @import "libs";
-@import "fonts";
+@import "mixins";
 
 .holder {
   background-image: url(../img/glass.svg);
@@ -75,8 +75,8 @@
 
     &-title {
       @include font-style(800, 40px, 36px);
-      padding-left: 40px;
       position: relative;
+      padding-left: 40px;
 
       .holder-pricing__span {
         display: block;

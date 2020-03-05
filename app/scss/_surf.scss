@@ -1,6 +1,6 @@
 @import "vars";
 @import "libs";
-@import "fonts";
+@import "mixins";
 
 .surf {
   background-image: url(../img/surf_marker.png);
@@ -331,13 +331,13 @@
   }
   
   .slider-map {
-    background-image: none;
     max-width: 100%;
     min-height: 280px;
+    background-image: none;
 
     .slick-list {
-      overflow: hidden;
       min-height: 280px;
+      overflow: hidden;
     }
 
     .slick-track {

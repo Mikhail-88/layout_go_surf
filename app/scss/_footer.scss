@@ -1,6 +1,6 @@
 @import "vars";
 @import "libs";
-@import "fonts";
+@import "mixins";
 
 .footer {
   text-align: center;
@@ -24,4 +24,8 @@
   }
 }
 
-@import "media";
+@media (max-width: 1000px) {
+  .footer {
+    padding: 90px 0 34px;
+  }
+}
