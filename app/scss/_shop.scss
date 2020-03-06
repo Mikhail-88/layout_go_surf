@@ -19,7 +19,6 @@
     max-width: 480px;
     width: 100%;
     padding-top: 160px;
-    margin-right: 40px;
   }
 
   &-price {
@@ -35,7 +34,7 @@
   &-content {
     display: flex;
     align-items: flex-end;
-    padding-left: 170px;
+    margin: 0 auto;
   }
 }
 
