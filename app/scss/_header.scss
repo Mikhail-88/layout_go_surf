@@ -188,6 +188,10 @@
   &__left {
     right: 125px;
   }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 .slider-line {
