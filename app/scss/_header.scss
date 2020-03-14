@@ -135,6 +135,21 @@
     height: 5px;
     background-color: $green;
     margin-bottom: 5px;
+    transition: all 0.3s linear;
+  }
+}
+
+.menu-btn__line.active {
+  &:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  &:nth-child(2) {
+    display: none;
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-45deg);
   }
 }
 

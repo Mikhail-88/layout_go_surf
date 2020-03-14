@@ -147,8 +147,8 @@ $(function () {
 
   $('.menu-btn').on('click', function () {
     $('.menu').toggleClass('active');
+    $('.menu-btn__line').toggleClass('active');
   });
 
   new WOW().init();
-
 });
